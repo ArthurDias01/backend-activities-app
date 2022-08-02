@@ -16,7 +16,7 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/todoapiDB";
 any request that has a Content-Type of application/json. */
 
 const corsConfig = {
-  origin: process.env.PORT,
+  origin: process.env.FRONTEND_URL,
 };
 
 app.use(express.json());
