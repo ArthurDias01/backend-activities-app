@@ -24,7 +24,6 @@ app.use(cors(corsConfig));
 /* This is a route handler. It is listening for a GET request to the root route of the application.
 When it receives a request, it will send back a response with the string "Hello World!". */
 app.get("/", (req, res) => {
-  res.send("IP", req.ip);
   res.send("Hello World!");
 });
 
