@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-
+const http = require("http");
 const ActivityRouter = require("./routes/activity.route");
 
 const app = express();
@@ -24,6 +24,7 @@ app.use(cors(corsConfig));
 /* This is a route handler. It is listening for a GET request to the root route of the application.
 When it receives a request, it will send back a response with the string "Hello World!". */
 app.get("/", (req, res) => {
+  console.log(req.socket.localAddress);
   res.send("Hello World!");
 });
 
