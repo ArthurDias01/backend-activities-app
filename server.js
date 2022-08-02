@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 console.log("RUNNING MONGODB CONNECT ON >>>>", MONGODB_URI);
-console.log("PATH >>>>", app.path);
+console.log("PATH >>>>", app.path());
 /* Connecting to the database and then starting the server. */
 mongoose
   .connect(MONGODB_URI, { useNewUrlParser: true })
